@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grupos da Copa do Mundo</title>
+
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card-grupo {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-grupo h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        details {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eef5ff;
+            border-radius: 8px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card-grupo:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+        }
+
+      
+        .botao {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #357abd;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Grupos e Fatos da Copa do Mundo</h1>
+
+    <div class="container">
+
+        <div id="grupoA" class="card-grupo">
+            <h2>🅰️ Grupo A</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>
+                    O jogo de abertura será México x África do Sul. 
+                    Confrontos entre Coreia do Sul e seleções europeias já ocorreram 
+                    em várias Copas, com histórico equilibrado.
+                </p>
+            </details>
+        </div>
+
+        <div id="grupoB" class="card-grupo">
+            <h2>🅱️ Grupo B</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Vaga Europeia (Bósnia)</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>
+                    O Canadá joga em casa, fator importante de desempenho. 
+                    Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.
+                </p>
+            </details>
+        </div>
+
+        <div id="grupoC" class="card-grupo">
+            <h2>🅲 Grupo C</h2>
+            <h3>Seleções</h3>
+            <ul>
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>
+                    Brasil, Marrocos e Escócia já dividiram grupo em 1998. 
+                    Brasil nunca perdeu para a Escócia em Copas.
+                </p>
+            </details>
+        </div>
+
+    </div>
+
+    <button class="botao" onclick="proximo()">Próximo</button>
+
+    <script>
+        function proximo() {
+
+           
+            document.querySelector("#grupoA h2").textContent = "🅳 Grupo D";
+            document.querySelector("#grupoA ul").innerHTML = `
+                <li>Estados Unidos</li>
+                <li>Paraguai</li>
+                <li>Austrália</li>
+                <li>Turquia</li>
+            `;
+            document.querySelector("#grupoA details p").textContent =
+                "Os EUA jogam em casa, vantagem histórica em Copas. Austrália enfrenta frequentemente seleções sul-americanas.";
+
+          
+            document.querySelector("#grupoB h2").textContent = "🅴 Grupo E";
+            document.querySelector("#grupoB ul").innerHTML = `
+                <li>Alemanha</li>
+                <li>Equador</li>
+                <li>Costa do Marfim</li>
+                <li>Curaçao</li>
+            `;
+            document.querySelector("#grupoB details p").textContent =
+                "Alemanha costuma dominar fases de grupos. Equador e Costa do Marfim têm estilos físicos semelhantes.";
+
+            
+            document.querySelector("#grupoC h2").textContent = "🅵 Grupo F";
+            document.querySelector("#grupoC ul").innerHTML = `
+                <li>Holanda</li>
+                <li>Japão</li>
+                <li>Tunísia</li>
+                <li>Suécia</li>
+            `;
+            document.querySelector("#grupoC details p").textContent =
+                "Holanda e Japão protagonizam jogos técnicos. Suécia mantém tradição defensiva forte.";
+        }
+    </script>
+
+</body>
+
+</html>
